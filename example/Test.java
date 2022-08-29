@@ -10,7 +10,7 @@ public class Test {
         Item item1 = new Item("Samsung", "SmartTV", 70000, true );
         Item item2 = new Item("Samsung", "A53", 46000);
         Item item3 = new Item("Motorola", "G22", 47000, false);
-        Item item4 = new Item("Apple", "Iphone 10", 2000000, false);
+        Item item4 = new Item("Apple", "Iphone 10", 200000, false);
         Item item5 = new Item("Huawei", "S22", 150000, false);
         ArrayList<Item> items = new ArrayList<>();
         items.add(item1);
