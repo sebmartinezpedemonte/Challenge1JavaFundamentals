@@ -1,12 +1,13 @@
 package com.smartinez.challenge1;
 
-import java.util.ArrayList;
+
+import java.util.List;
 
 public class MailReceipt extends Receipt{
 
     private String mail;
 
-    public MailReceipt(ArrayList<Item> items, String mail) {
+    public MailReceipt(List<Item> items, String mail) {
         super(items);
         this.mail = mail;
     }
@@ -18,8 +19,21 @@ public class MailReceipt extends Receipt{
             System.out.println(printItems());
         }catch(NoItemsException e){
             System.out.println("Error sending receipt on an email due to " + e.getMessage());
-        }catch(NoPrintableItemsException e){
+        }catch(NoPrintableItemsException e){ //could be changed to this (NoItemsException | NoPrintableItemsException e)
             System.out.println("Error sending receipt on an email due to " +e.getMessage());
         }
     }
+
+    /*
+        public void print() {
+        try {
+            System.out.println("Sending receipt to email: " + this.mail);
+            System.out.println(printItems());
+        }catch(NoItemsException | NoPrintableItemsException e){
+            System.out.println("Error sending receipt on an email due to " + e.getMessage());
+        }
+    }
+}
+     */
+
 }

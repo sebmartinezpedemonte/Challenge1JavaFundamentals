@@ -3,6 +3,8 @@ package com.smartinez.example;
 import com.smartinez.challenge1.*;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Test {
     public static void main(String[] args) throws NoItemsException, NoPrintableItemsException {
@@ -12,12 +14,12 @@ public class Test {
         Item item3 = new Item("Motorola", "G22", 47000, false);
         Item item4 = new Item("Apple", "Iphone 10", 200000, false);
         Item item5 = new Item("Huawei", "S22", 150000, false);
-        ArrayList<Item> items = new ArrayList<>();
+        List<Item> items = new ArrayList<>();
         items.add(item1);
         items.add(item2);
         items.add(item3);
-        ArrayList<Item> itemsEmpty = new ArrayList<>();
-        ArrayList<Item> noPrintableItems = new ArrayList<>();
+        List<Item> itemsEmpty = new ArrayList<>();
+        List<Item> noPrintableItems = new ArrayList<>();
         noPrintableItems.add(item4);
         noPrintableItems.add(item5);
         MailReceipt mail1 = new MailReceipt(items, "sebastian@gmail.com");
@@ -28,13 +30,13 @@ public class Test {
         PaperReceipt paper3 = new PaperReceipt(noPrintableItems);
 
         mail1.print();
-        System.out.println();
+
         mail2.print();
         System.out.println();
         mail3.print();
         System.out.println();
         paper1.print();
-        System.out.println();
+
         paper2.print();
         System.out.println();
         paper3.print();

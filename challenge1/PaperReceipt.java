@@ -1,17 +1,28 @@
 package com.smartinez.challenge1;
 
-import java.util.ArrayList;
+
+import java.util.List;
 
 public class PaperReceipt extends Receipt{
 
-    private String PAPER_TYPE = "A4";
+    private final String PAPER_TYPE = "A4";
 
-    public PaperReceipt(ArrayList<Item> items) {
+    public PaperReceipt(List<Item> items) {
         super(items);
     }
 
     @Override
-    public void print() throws NoItemsException, NoPrintableItemsException {
+    public void print() {
+        try {
+            System.out.println("Printing receipt in " + PAPER_TYPE);
+            System.out.println(printItems());
+        }catch(NoItemsException | NoPrintableItemsException e){
+            System.out.println("Error printing receipt to paper due to " + e.getMessage());
+        }
+    }
+    /*
+        //Another way:
+        public void print() throws NoItemsException, NoPrintableItemsException {
         try {
             System.out.println("Printing receipt in " + PAPER_TYPE);
             System.out.println(printItems());
@@ -21,4 +32,5 @@ public class PaperReceipt extends Receipt{
             System.out.println("Error printing receipt to paper due to " +e.getMessage());
         }
     }
+     */
 }
