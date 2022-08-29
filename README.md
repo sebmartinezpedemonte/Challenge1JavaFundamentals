@@ -1,5 +1,4 @@
-# Challenge1JavaFundamentals
-Java Fundamentals – Coding 	challenge
+# Java Fundamentals – Coding 	challenge
 
 This coding challenge is a mandatory exercise that must be completed. It will later need to be uploaded to BitBucket (after we have the GIT classes). 
 There is no deadline for this challenge to be completed, but we recommend doing it as soon as possible in case there is something we need to teach again.
